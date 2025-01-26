@@ -1,0 +1,358 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(59, 59, 59);
+}
+
+.section__container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.nav__logo span {
+  color: #06f71a;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-right: auto;
+}
+
+.link a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #e9f7f7;
+}
+
+.link a:hover {
+  color: #ffffff;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: space-evenly;
+  color: #ffffff;
+}
+
+.profile-info img {
+  width: 35px; /* Adjust the width as needed */
+  height: 35px; /* Adjust the height as needed */
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.greeting {
+  text-align: justify;
+}
+
+button {
+  background-color: #06f71a;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+}
+
+main {
+  padding: 10px;
+}
+
+.dashboard {
+  position: relative;
+}
+
+.dashboard h3 {
+  z-index: 1;
+}
+
+.dashboard button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#previous-health-records {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.health-record {
+  width: 47%; /* Adjust as needed to leave space for margins */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#daily-medicine-intake {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.medicine-card {
+  width: 48%; /* Adjust as needed to leave space for margins */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.calendar-day.taken {
+  background-color: #06f71a;
+  color: #fff;
+}
+
+.doctor-card {
+  width: 98%; /* Adjust as needed */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.doctor-details img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.doctor-info {
+  flex-grow: 1;
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-btn,
+.video-call-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.chat-btn {
+  background-color: #06f71a;
+}
+
+.video-call-btn {
+  background-color: #fb923c;
+}
+
+.subscription-card {
+  width: 98%; /* Adjust as needed */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.subscription-icon {
+  margin-right: 10px;
+}
+
+.subscription-info {
+  flex-grow: 1;
+}
+
+.subscription-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #06f71a;
+}
+
+footer {
+  background-color: rgb(59, 59, 59);
+  padding: 10px;
+  max-height: 650px;
+  align-items: center;
+}
+
+form {
+  max-width: 500px;
+  align-self: center;
+  margin: 5px auto;
+  background-color: rgb(59, 59, 59);
+}
+
+form input {
+  width: 70%;
+  height: 40px;
+  padding: 2px;
+  margin-left: 60px;
+  border-radius: 10px;
+}
+
+form textarea {
+  width: 70%;
+  height: 150px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+
+form button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-left: 210px;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: rgb(4, 73, 245);
+}
+
+.social-media-icons {
+  display: flex;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 530px;
+}
+.social-media-icons a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #ffffff; /* Change the color as needed */
+}
+.fa-facebook:hover {
+  color: rgb(42, 100, 245);
+  animation: bounce 0.5s;
+}
+.fa-instagram:hover {
+  color: rgb(249, 52, 124);
+  animation: bounce 0.5s;
+}
+.fa-twitter:hover {
+  color: rgb(42, 100, 245);
+  animation: bounce 0.5s;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(59, 59, 59);
+  color: #ffffff;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.bottom-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="a.css" />
+    <script src="a.js"></script>
+    <title>Rides</title>
+  </head>
+  <body>
+    <div class="pillbox-container">
+      <div id="pillbox-form">
+        <div class="pill__logo">Ride<span>Now</span></div>
+        <form id="rideForm">
+          <label for="pickupLocation">Pick Up:</label>
+          <div class="dropdown">
+            <input
+              type="text"
+              id="pickupLocation"
+              class="pickup-input"
+              placeholder="Select pick-up location" />
+            <div class="dropdown-content">
+              <a href="#">Address 1</a>
+              <a href="#">Address 2</a>
+              <a href="#">Address 3</a>
+              <!-- Add more addresses as needed -->
+            </div>
+          </div>
+          <br />
+          <label for="destination">Destination:</label>
+          <div class="dropdown">
+            <input
+              type="text"
+              id="destination"
+              class="pickup-input"
+              placeholder="Select destination" />
+            <div class="dropdown-content">
+              <a href="#">Address 1</a>
+              <a href="#">Address 2</a>
+              <a href="#">Address 3</a>
+              <!-- Add more addresses as needed -->
+            </div>
+          </div>
+          <br />
+          <button type="submit">Search Rides</button>
+        </form>
+      </div>
+      <div class="drivers-list-container" id="driversListContainer">
+        <div class="drivers-list-header">Drivers<span> List</span></div>
+        <ul id="driversList"></ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="profile1.css" />
+    <script
+      src="https://kit.fontawesome.com/31149d48b0.js"
+      crossorigin="anonymous"></script>
+    <script defer src="profile1.js"></script>
+    <title>User Profile</title>
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav__logo">Eco<span>Vaahan</span></div>
+        <div class="profile">
+          <ul class="nav__links">
+            <li class="link"><a href="#home">Home</a></li>
+            <li class="link"><a href="#health">Rides</a></li>
+            <li class="link"><a href="#medi">Rewards</a></li>
+            <li class="link"><a href="#doctors">Reedem</a></li>
+            <li class="link"><a href="#premium">Emission Saved</a></li>
+            <li class="link"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="profile-info">
+          <span class="greeting">Hello, User </span>
+          <img src="ecovaahan logo.jpg" alt="Profile Logo" />
+          <button class="btn"><a href="index.html">Log Out</a></button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Medical Dashboard -->
+      <section class="dashboard" id="home">
+        <h3>Check Your Rides For Daily Traveling</h3>
+        <div>
+          <button onclick="openPillbox()">
+            <a href="rides.html">Go to Rides</a>
+          </button>
+        </div>
+      </section>
+
+      <!-- Previous Health Records and Daily Medicine Intake -->
+      <section class="health-section" id="health" id="medi">
+        <!-- <div> -->
+        <h2>Rides This Month</h2>
+        <div class="column" id="previous-health-records">
+          <!-- Health Record 1 -->
+          <div class="health-record">
+            <h3>11 Feb to 11 March - 2024</h3>
+            <p>Total Rides : 07</p>
+            <p>Total Cost : Rs. 64</p>
+            <p>Rewards : Rs. 6 off on 05 Rides Completion</p>
+            <!-- <p>Date: December 15, 2023</p>
+            <p>Blood Pressure: 120/80 mmHg</p>
+            <p>Blood Sugar: 95 mg/dL</p>
+            <p>Cholesterol: 180 mg/dL</p> -->
+            <!-- Add more details as needed -->
+          </div>
+          <!-- Health Record 2 -->
+          <div class="health-record">
+            <h3>12 March to 12 April - 2024</h3>
+            <p>Total Rides : 12</p>
+            <p>Total Cost : Rs. 134</p>
+            <p>Rewards : Rs. 16 off on 10 Rides Completion</p>
+            <!-- <p>Date: January 10, 2024</p>
+            <p>Dentist: Dr. Anurag Pandey</p>
+            <p>Dental X-rays: No cavities detected</p> -->
+            <!-- Add more details as needed -->
+          </div>
+        </div>
+        <!-- Daily Medicine Intake -->
+        <h2>Daily Rides</h2>
+        <div class="column" id="daily-medicine-intake">
+          <!-- Medicine Card 1: Today's Medicine -->
+          <div class="medicine-card">
+            <h3>Today's Rides</h3>
+            <p>From : Alpha II</p>
+            <p>To : G.L. Bajaj Institute of Technology and Management</p>
+            <p>With Mayank Agrawal : Alpha II To Knowledge Park II Metro</p>
+            <!-- <p>Medicine 1 - Morning ( 9:15 a.m)</p>
+            <p>Medicine 2 - Afternoon ( 1:30 p.m)</p>
+            <p>Medicine 3 - Evening ( 6:45 p.m)</p> -->
+            <!-- Add more details as needed -->
+          </div>
+
+          <!-- Medicine Card 2: Calendar -->
+          <!-- <div class="medicine-card">
+            <h3>Ride Calendar - April 2024</h3>
+            <div id="calendar"></div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Cards for Doctor Counseling -->
+      <section class="doctor-cards" id="doctors">
+        <h2>Connections</h2>
+        <div class="health-record">
+          <p>Priyanshu Rathi : AB Hostel To Delhi</p>
+          <p>Vikram Chauhan : AB Hostel To Jagat Farm</p>
+          <p>Anurag Pandey : AB Hostel To Chandigarh</p>
+          <p>Worship Agrawal : AB Hostel To Agra</p>
+          <p>Gagan Chauhan : AB Hostel To Haridwar</p>
+        </div>
+        <!-- <div class="doctor-card" id="doctors">
+          <div class="doctor-details">
+            <img
+              src="/PROJECTS/MediGo/Assets 2/male doctor 1.jpg"
+              alt="Doctor 1"
+              width="50"
+              height="50" />
+            <div class="doctor-info">
+              <h3>Dr. Abhishek Tripathi</h3>
+              <p>Specialization: Cardiologist</p>
+            </div>
+            <div class="doctor-actions">
+              <button class="chat-btn" onclick="startChat('Dr. John Doe')">
+                Chat
+              </button>
+              <button
+                class="video-call-btn"
+                onclick="startVideoCall('Dr. John Doe')">
+                Video Call
+              </button>
+            </div>
+          </div>
+          <div class="doctor-details">
+            <img
+              src="/PROJECTS/MediGo/Assets 2/Male Doctor 2.jpg"
+              alt="Doctor 2"
+              width="50"
+              height="50" />
+            <div class="doctor-info">
+              <h3>Dr. Vikram Chahuhan</h3>
+              <p>Specialization: Psychologist</p>
+            </div>
+            <div class="doctor-actions">
+              <button class="chat-btn" onclick="startChat('Dr. Jane Smith')">
+                Chat
+              </button>
+              <button
+                class="video-call-btn"
+                onclick="startVideoCall('Dr. Jane Smith')">
+                Video Call
+              </button>
+            </div>
+          </div>
+          <div class="doctor-details">
+            <img
+              src="/PROJECTS/MediGo/Assets 2/female doctor 1.jpg"
+              alt="Doctor 3"
+              width="50"
+              height="50" />
+            <div class="doctor-info">
+              <h3>Dr. Nidhi Ahuja</h3>
+              <p>Specialization: Neurosurgeon</p>
+            </div>
+            <div class="doctor-actions">
+              <button class="chat-btn" onclick="startChat('Dr. Emily Johnson')">
+                Chat
+              </button>
+              <button
+                class="video-call-btn"
+                onclick="startVideoCall('Dr. Emily Johnson')">
+                Video Call
+              </button>
+            </div>
+          </div>
+          <div class="doctor-details">
+            <img
+              src="/PROJECTS/MediGo/Assets 2/male doctor 3.jpg"
+              alt="Doctor 4"
+              width="50"
+              height="50" />
+            <div class="doctor-info">
+              <h3>Dr. Akash Gupta</h3>
+              <p>Specialization: Dermatologist</p>
+            </div>
+            <div class="doctor-actions">
+              <button class="chat-btn" onclick="startChat('Dr. Michael Brown')">
+                Chat
+              </button>
+              <button
+                class="video-call-btn"
+                onclick="startVideoCall('Dr. Michael Brown')">
+                Video Call
+              </button>
+            </div>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- Subscription Plans -->
+      <section class="subscription-plans" id="premium">
+        <!-- Subscription Plans Cards -->
+        <h2>Advance Booking</h2>
+        <div class="subscription-card" id="premium">
+          <p>1st May 2024</p>
+          <p>From : Knowledge Park II, Greater Noida</p>
+          <p>To : Ghaziabad Railway Station, GZB</p>
+          <!-- Weekly Plan -->
+          <!-- <div class="subscription-details">
+            <div class="subscription-icon">
+              <i class="ri-calendar-event-fill"></i>
+            </div>
+            <div class="subscription-info">
+              <h3>Weekly Plan</h3>
+              <p>Access premium features for 7 days</p>
+              <p>Price: ₹ 899</p>
+            </div>
+            <div class="subscription-actions">
+              <button class="subscribe-btn" onclick="subscribe('Weekly Plan')">
+                Subscribe
+              </button>
+            </div>
+          </div> -->
+
+          <!-- Monthly Plan -->
+          <!-- <div class="subscription-details">
+            <div class="subscription-icon">
+              <i class="ri-calendar-range-fill"></i>
+            </div>
+            <div class="subscription-info">
+              <h3>Monthly Plan</h3>
+              <p>Access premium features for 30 days</p>
+              <p>Price: ₹ 1799</p>
+            </div>
+            <div class="subscription-actions">
+              <button class="subscribe-btn" onclick="subscribe('Monthly Plan')">
+                Subscribe
+              </button>
+            </div>
+          </div> -->
+
+          <!-- Yearly Plan -->
+          <!-- <div class="subscription-details">
+            <div class="subscription-icon">
+              <i class="ri-calendar2-fill"></i>
+            </div>
+            <div class="subscription-info">
+              <h3>Yearly Plan</h3>
+              <p>Access premium features for 365 days</p>
+              <p>Price: ₹ 2499</p>
+            </div>
+            <div class="subscription-actions">
+              <button class="subscribe-btn" onclick="subscribe('Yearly Plan')">
+                Subscribe
+              </button>
+            </div>
+          </div> -->
+
+          <!-- Add more subscription plans as needed -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with Social Media Icons -->
+    <footer id="contact">
+      <section>
+        <br />
+        <div class="social-media-icons">
+          <a href="https://www.twitter.com/"
+            ><i class="fab fa-twitter fa-bounce"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+            ><i class="fab fa-instagram fa-bounce"></i
+          ></a>
+          <a href="https://www.facebook.com/"
+            ><i class="fab fa-facebook fa-bounce"></i
+          ></a>
+        </div>
+        <form id="contactForm">
+          <br />
+          <h1 style="margin-left: 150px; color: #ffffff">CONTACT US :)</h1>
+          <br />
+          <input
+            type="text"
+            placeholder="Type your Name here"
+            class="contact__input"
+            id="nameInput"
+            oninput="validateName()" /><br /><br />
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            class="contact__input"
+            id="emailInput"
+            oninput="validateEmail()" /><br /><br />
+          <textarea
+            id="messageInput"
+            name="message"
+            rows="4"
+            placeholder="Type your message here..."></textarea
+          ><br />
+          <button type="button" onclick="submitForm()">Send</button>
+        </form>
+        <div class="container">
+          <div class="bottom-left">Privacy Policy</div>
+          <div class="bottom-center">© Eco Vaahan , All Rights Reserved</div>
+          <div class="bottom-right">Terms And Conditions</div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

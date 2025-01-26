@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rides.css" />
+    <script src="rides.js"></script>
+    <title>Rides</title>
+    <style>
+      .drivers-list-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+
+      .driver-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ride-booking-container">
+      <div id="ride-booking-form">
+        <div class="ride-logo">Book<span>Ride</span></div>
+        <form id="rideForm" onsubmit="searchRides(event)">
+          <label for="pickupLocation">Pick Up:</label><br /><br />
+          <div class="dropdown">
+            <select
+              id="pickupLocation"
+              class="pickup-input"
+              onchange="updatePickupAddress()">
+              <option value="" disabled selected>
+                Select pick-up location
+              </option>
+              <option value="Address 1">Pari Chowk</option>
+              <option value="Address 2">GL Bajaj</option>
+              <option value="Address 3">Jagat Farm</option>
+              <!-- Add more addresses as needed --></select
+            ><br /><br />
+          </div>
+          <br />
+          <label for="destination">Destination:</label><br /><br />
+          <div class="dropdown">
+            <select
+              id="destination"
+              class="pickup-input"
+              onchange="updateDestinationAddress()">
+              <option value="" disabled selected>Select destination</option>
+              <option value="Address 1">Pari Chowk</option>
+              <option value="Address 2">GL Bajaj</option>
+              <option value="Address 3">Ghaziabad Railway Station</option>
+              <!-- Add more addresses as needed --></select
+            ><br /><br />
+          </div>
+          <br /><br /><br />
+          <button type="submit">Search Rides</button>
+        </form>
+      </div>
+      <div class="drivers-list-container" id="driversListContainer">
+        <div class="driver-container">
+          <div class="Rahul">
+            <div class="driver-add-detail">
+              <span class="driver-name">Rahul Pandey</span><br /><br />
+              <span class="user-address">From : GL Bajaj</span><br />
+              <span class="user-address">To : Ghaziabad Railway Station</span
+              ><br />
+              <div>
+                <div class="booking-options">
+                  <div class="cab-apps">
+                    <div class="cab-app">
+                      <img src="ola.svg" alt="Cab App 1" />
+                      <div class="price">Rs.280</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="1659761297uber-icon.webp" alt="Cab App 2" />
+                      <div class="price">Rs.295</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="Rapido-logo.png" alt="Cab App 3" />
+                      <div class="price">Rs.285</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-price">
+                  <div class="price">Our Price : Rs.155</div>
+                  <button class="book-now-button">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="driver-container">
+          <div class="Vikas">
+            <div class="driver-add-detail">
+              <span class="driver-name">Vikas Saini</span><br /><br />
+              <span class="user-address">From : Knowledge Park - II Metro</span
+              ><br />
+              <span class="user-address">To : Ghaziabad Railway Station</span>
+              <div>
+                <div class="booking-options">
+                  <div class="cab-apps">
+                    <div class="cab-app">
+                      <img src="ola.svg" alt="Cab App 1" />
+                      <div class="price">Rs.300</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="1659761297uber-icon.webp" alt="Cab App 2" />
+                      <div class="price">Rs.310</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="Rapido-logo.png" alt="Cab App 3" />
+                      <div class="price">Rs.290</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-price">
+                  <div class="price">Our Price : Rs.155</div>
+                  <button class="book-now-button">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="driver-container">
+          <div class="Gopal">
+            <div class="driver-add-detail">
+              <span class="driver-name">Gopal Verma</span><br /><br />
+              <span class="user-address">From : Pari Chowk</span><br />
+              <span class="user-address">To : Gaur City</span>
+              <div>
+                <div class="booking-options">
+                  <div class="cab-apps">
+                    <div class="cab-app">
+                      <img src="ola.svg" alt="Cab App 1" />
+                      <div class="price">Rs.90</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="1659761297uber-icon.webp" alt="Cab App 2" />
+                      <div class="price">Rs.80</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="Rapido-logo.png" alt="Cab App 3" />
+                      <div class="price">Rs.85</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-price">
+                  <div class="price">Our Price : Rs.50</div>
+                  <button class="book-now-button">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="driver-container">
+          <div class="Vikas">
+            <div class="driver-add-detail">
+              <span class="driver-name">Vikas Saini</span><br /><br />
+              <span class="user-address">From : Knowledge Park - II Metro</span
+              ><br />
+              <span class="user-address">To : Ghaziabad Railway Station</span>
+              <div>
+                <div class="booking-options">
+                  <div class="cab-apps">
+                    <div class="cab-app">
+                      <img src="ola.svg" alt="Cab App 1" />
+                      <div class="price">Rs.20</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="1659761297uber-icon.webp" alt="Cab App 2" />
+                      <div class="price">Rs.18</div>
+                    </div>
+                    <div class="cab-app">
+                      <img src="Rapido-logo.png" alt="Cab App 3" />
+                      <div class="price">Rs.15</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-price">
+                  <div class="price">Our Price : Rs.10</div>
+                  <button class="book-now-button">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+body {  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.pillbox-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#pillbox-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  background-color: rgb(59, 59, 59);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-top: 35px;
+  max-height: 80vh;
+  /* background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url("/PROJECTS/MediGo/Assets 2/Pillbox\ 1.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+/* .pill__container {
+      padding: 0rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom: 15px;
+    } */
+
+.pill__logo {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #06f71a;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.pill__logo span {
+  color: #ffffff;
+}
+
+.pill__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#pillbox {
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow-y: auto;
+  max-height: 130vh;
+}
+
+#medicineForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 315px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 1px;
+  color: #ffffff;
+}
+
+/* input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } */
+
+button {
+  background-color: #06f71a;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 335px;
+}
+
+button:hover {
+  background-color: #06f71a;
+}
+
+/* Styles for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Style for the input field */
+.pickup-input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Styles for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px; /* Set the same width as the input field */
+}
+/* Styles for dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.medicine-list-container {
+  position: relative;
+  flex-grow: 1;
+  width: 50%;
+  background-color: rgb(59, 59, 59);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-top: 35px;
+  overflow-y: auto;
+  max-height: 80vh;
+  /* background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url("/PROJECTS/MediGo/Assets 2/PillBoxMedicine1.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.medicine-list-header {
+  position: sticky;
+  top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #06f71a;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: none;
+  padding: 3px;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+}
+.medicine-list-header span {
+  color: #ffffff;
+}
+
+#medicineList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.medicine-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #06f71a;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #ff6666;
+}
+
+.hide-items .medicine-item {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Additional CSS for drivers list */
+.drivers-list-container {
+  position: relative;
+  flex-grow: 1;
+  width: 50%;
+  background-color: rgb(59, 59, 59);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-top: 35px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.drivers-list-header {
+  position: sticky;
+  top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #06f71a;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: none;
+  padding: 3px;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+}
+
+.drivers-list-header span {
+  color: #ffffff;
+}
